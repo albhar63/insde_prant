@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>داخل المطبعه | Inside Praint — Option A</title>
 <meta name="description" content="موقع تعريفي لقناة داخل المطبعه (Inside Praint) — Option A: تصميم احترافي بسيط عن الطباعة والتجهيز." />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png">
-
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4  "></script>
 <style>
 :root{color-scheme: dark;}
 .glass{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
@@ -58,9 +56,9 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
 <div class="mx-auto max-w-6xl px-4">
 <div class="flex items-center justify-between py-3">
   <!-- 🔗 رابط القناة الكامل -->
-  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg" target="_blank" class="flex items-center gap-3">
+  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg  " target="_blank" class="flex items-center gap-3">
     <!-- 🖼️ شعار القناة -->
-    <img src="favicon_128x128.png" alt="شعار قناة داخل المطبعه" class="h-10 w-10 rounded-xl shadow-lg brand-shadow border border-white/10" />
+    <img src="images/logo.jpeg" alt="شعار قناة داخل المطبعه" class="h-10 w-10 rounded-xl shadow-lg brand-shadow border border-white/10" />
     <div class="leading-tight">
       <div class="font-extrabold tracking-tight">داخل المطبعه</div>
       <div class="text-xs text-slate-300">Inside Praint</div>
@@ -221,31 +219,22 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
 </section>
 <!-- Videos -->
 <section id="videos" class="mx-auto max-w-6xl px-4 py-14">
-<div class="flex items-end justify-between gap-4 flex-wrap">
-<div>
-<h2 class="text-2xl md:text-3xl font-black tracking-tight">الفيديوهات</h2>
-<p class="mt-2 text-slate-300">فلتر سريع حسب النوع وابحث بالعنوان.</p>
-</div>
-<div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-<div class="relative flex-1 sm:w-72">
-<input id="searchInput" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm placeholder:text-slate-400 focus-ring" placeholder="ابحث... (مثال: CMYK)" />
-<div class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-</div>
-</div>
-<select id="categorySelect" class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm focus-ring">
-<option value="all">كل الأنواع</option>
-<option value="Basics">أساسيات</option>
-<option value="Color">ألوان</option>
-<option value="Paper">ورق</option>
-<option value="Finishing">تشطيب</option>
-</select>
-</div>
-</div>
-<div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="videoGrid" aria-live="polite">
-<!-- populated by JS -->
-</div>
-<div class="mt-6 text-sm text-slate-400" id="resultsMeta"></div>
+  <div>
+    <h2 class="text-2xl md:text-3xl font-black tracking-tight">الفيديوهات</h2>
+    <p class="mt-2 text-slate-300">شاهد جميع فيديوهات قناة "داخل المطبعه" مباشرة من يوتيوب.</p>
+  </div>
+  <div class="mt-6">
+    <iframe
+      width="100%"
+      height="500"
+      src="https://www.youtube.com/embed/videoseries?list=UU7nEZnqtTsAPzlJpOlJyKDg"
+      title="فيديوهات قناة داخل المطبعه"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      class="rounded-2xl border border-white/10 bg-black"
+    ></iframe>
+  </div>
 </section>
 <!-- Series/Services -->
 <section id="series" class="mx-auto max-w-6xl px-4 py-14">
@@ -301,7 +290,7 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
 <div class="text-xs text-slate-300">روابط</div>
 <div class="mt-2 flex flex-wrap gap-2">
   <!-- ✅ زر YouTube فعّال بلون برتقالي -->
-  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg" target="_blank" class="youtube-btn rounded-xl px-4 py-2 text-sm font-bold">
+  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg  " target="_blank" class="youtube-btn rounded-xl px-4 py-2 text-sm font-bold">
     YouTube
   </a>
   <a class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10" href="#" onclick="return false;">Instagram</a>
@@ -358,7 +347,6 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
 <span class="text-xs text-slate-400" id="msgCount"></span>
 </div>
 <div id="messages" class="mt-3 grid gap-3"></div>
-</div>
 </div>
 </div>
 </div>
@@ -464,114 +452,6 @@ renderTopics(btn.dataset.chip);
 });
 });
 renderTopics('all');
-// Videos data (placeholders)
-const videos = [
-{title:'الفرق بين RGB و CMYK (ولماذا يختلف اللون؟)', category:'Color', minutes:8, level:'أساسيات', note:'شرح سريع + نصائح عملية.'},
-{title:'Bleed و Safe Area: أهم إعدادين قبل الطباعة', category:'Basics', minutes:6, level:'أساسيات', note:'أمثلة مقاسات.'},
-{title:'اختيار الورق: مطفي أم لامع؟', category:'Paper', minutes:7, level:'متوسط', note:'حسب نوع المشروع.'},
-{title:'PDF للطباعة: أفضل إعدادات التصدير', category:'Basics', minutes:9, level:'متوسط', note:'خطوط، دقة، ألوان.'},
-{title:'Spot UV وفويل: كيف تجهز ملف التشطيب؟', category:'Finishing', minutes:10, level:'متقدم', note:'طبقات خاصة وPantone.'},
-{title:'بروفة الطباعة (Proof): متى ولماذا؟', category:'Basics', minutes:5, level:'أساسيات', note:'لتجنب خسائر.'},
-{title:'سماكات الورق (gsm) بطريقة سهلة', category:'Paper', minutes:6, level:'أساسيات', note:'أمثلة واقعية.'},
-{title:'سلوفان/لامينيت: الفرق بين المطفي والحريري', category:'Finishing', minutes:7, level:'متوسط', note:'اللمس والحماية.'}
-];
-function renderVideos(){
-const q = ($('#searchInput').value || '').trim().toLowerCase();
-const cat = $('#categorySelect').value;
-const filtered = videos.filter(v => {
-const okCat = (cat === 'all') ? true : v.category === cat;
-const okQ = q ? (v.title.toLowerCase().includes(q) || v.note.toLowerCase().includes(q)) : true;
-return okCat && okQ;
-});
-const grid = $('#videoGrid');
-grid.innerHTML = '';
-filtered.forEach((v,i) => {
-const card = document.createElement('article');
-card.className = 'fade-in rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition';
-card.style.animationDelay = (i*50)+'ms';
-const badge = v.category;
-card.innerHTML = `
-<div class="flex items-start justify-between gap-3">
-<span class="text-[11px] rounded-full border border-white/10 bg-slate-950/40 px-2.5 py-1 text-slate-200">${badge}</span>
-<span class="text-xs text-slate-400">${v.minutes} دقائق • ${v.level}</span>
-</div>
-<h3 class="mt-3 font-extrabold leading-snug">${v.title}</h3>
-<p class="mt-2 text-sm text-slate-300">${v.note}</p>
-<div class="mt-4 flex items-center justify-between gap-3">
-<button class="watchBtn rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-4 py-2 text-sm font-bold hover:opacity-95" type="button">عرض مثال</button>
-<button class="shareBtn rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">نسخ عنوان</button>
-</div>
-`;
-card.querySelector('.shareBtn').addEventListener('click', async () => {
-try{
-await navigator.clipboard.writeText(v.title);
-toast('تم نسخ العنوان');
-}catch{ toast('تعذّر النسخ'); }
-});
-card.querySelector('.watchBtn').addEventListener('click', () => openModal(v));
-grid.appendChild(card);
-});
-$('#resultsMeta').textContent = `النتائج: ${filtered.length} من ${videos.length}`;
-if(filtered.length === 0){
-const empty = document.createElement('div');
-empty.className = 'rounded-2xl border border-white/10 bg-slate-950/30 p-6 text-slate-300 sm:col-span-2 lg:col-span-3';
-empty.textContent = 'لا توجد نتائج. جرّب كلمة أخرى أو اختر نوعًا مختلفًا.';
-grid.appendChild(empty);
-}
-}
-$('#searchInput').addEventListener('input', renderVideos);
-$('#categorySelect').addEventListener('change', renderVideos);
-renderVideos();
-// Modal
-const modal = document.createElement('div');
-modal.id = 'modal';
-modal.className = 'fixed inset-0 hidden z-[60]';
-modal.innerHTML = `
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative mx-auto max-w-2xl px-4 py-10">
-<div class="rounded-3xl border border-white/10 bg-slate-950/90 glass p-6">
-<div class="flex items-start justify-between gap-4">
-<div>
-<div class="text-xs text-slate-300">معاينة</div>
-<h3 id="modalTitle" class="mt-1 text-xl font-extrabold"></h3>
-<p id="modalMeta" class="mt-2 text-sm text-slate-300"></p>
-</div>
-<button id="closeModal" class="rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10 focus-ring" aria-label="إغلاق" type="button">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-</button>
-</div>
-<div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5">
-<div class="text-sm text-slate-200 font-bold">ملاحظة</div>
-<div id="modalNote" class="mt-2 text-sm text-slate-300"></div>
-<div class="mt-4 text-xs text-slate-400">ضع رابط فيديو يوتيوب الحقيقي هنا لاحقًا (Embed) أو زر يفتح القناة.</div>
-</div>
-<div class="mt-5 flex flex-col sm:flex-row gap-2">
-<button id="copyModalTitle" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">نسخ العنوان</button>
-<a href="#contact" id="modalCta" class="rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-4 py-2 text-sm font-bold text-center hover:opacity-95">اقترح فيديو مشابه</a>
-</div>
-</div>
-</div>
-`;
-document.body.appendChild(modal);
-function openModal(v){
-$('#modalTitle').textContent = v.title;
-$('#modalMeta').textContent = `${v.category} • ${v.minutes} دقائق • ${v.level}`;
-$('#modalNote').textContent = v.note;
-modal.classList.remove('hidden');
-document.body.style.overflow = 'hidden';
-$('#copyModalTitle').onclick = async () => {
-try{ await navigator.clipboard.writeText(v.title); toast('تم النسخ'); }catch{ toast('تعذّر النسخ'); }
-};
-}
-function closeModal(){
-modal.classList.add('hidden');
-document.body.style.overflow = '';
-}
-modal.addEventListener('click', (e) => {
-if(e.target === modal.firstElementChild) closeModal();
-});
-$('#closeModal').addEventListener('click', closeModal);
-window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
 // Accordion
 const accData = [
 {title:'سلسلة: من التصميم إلى الطباعة', items:['تحويل الألوان إلى CMYK','تجهيز PDF/X','اختبار قبل الطباعة (Proof)']},
