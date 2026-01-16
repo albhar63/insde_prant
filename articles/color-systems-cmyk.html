@@ -1,1 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الفرق بين RGB و CMYK | داخل المطبعه</title>
+  <meta name="description" content="شرح عملي لفرق الألوان بين الشاشة (RGB) والطباعة (CMYK)، وكيف تتجنب اختلاف الألوان عند الطباعة." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root { color-scheme: dark; --orange-brand: #FF6F00; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .gridbg { background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0); background-size: 22px 22px; }
+    body { min-h-dvh bg-slate-950 text-slate-100 selection:bg-blue-500/30 selection:text-slate-50 }
+    .article-header { background: radial-gradient(600px 240px at 70% 40%, rgba(251,113,133,.15), transparent 60%); }
+    .back-btn {
+      background-color: var(--orange-brand) !important;
+      color: white !important;
+      border-color: var(--orange-brand) !important;
+    }
+    .back-btn:hover {
+      background-color: #e05a00 !important;
+      opacity: 0.95;
+    }
+    .prose h2 { margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  </style>
+  <link rel="icon" type="image/png" href="../favicon_32x32.png" sizes="32x32" />
+</head>
+<body class="min-h-dvh bg-slate-950 text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 glass">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-4">
+      <a href="../index.html" class="back-btn inline-flex items-center gap-2 rounded-xl px-4 py-2 font-bold">
+        ← العودة
+      </a>
+      <h1 class="text-xl font-extrabold">داخل المطبعه</h1>
+    </div>
+  </header>
 
+  <article class="article-header relative overflow-hidden">
+    <div class="absolute inset-0 gridbg opacity-60"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-black tracking-tight text-orange-400 mb-6">
+        الفرق بين RGB و CMYK
+      </h1>
+      
+      <div class="prose prose-invert prose-lg max-w-none text-slate-200 space-y-6">
+        <p class="text-lg">
+          إذا طُبع شعارك بلون مختلف عما رأيته على الشاشة، فالسبب غالبًا هو الخلط بين نظامي الألوان: RGB و CMYK.
+        </p>
+
+        <h2>ما هو RGB؟</h2>
+        <p>
+          نظام ألوان <strong>إضافي</strong> يستخدم في الشاشات (تلفزيون، هاتف، كمبيوتر). يعتمد على:
+          <br><code>Red + Green + Blue = White</code>
+          <br>الألوان تُنتج بإضاءة البكسلات — لذلك تبدو زاهية ومشرقة.
+        </p>
+
+        <h2>ما هو CMYK؟</h2>
+        <p>
+          نظام ألوان <strong>طرحية</strong> يستخدم في الطباعة. يعتمد على:
+          <br><code>Cyan + Magenta + Yellow + Key (Black) = Dark Brown (ليس أسود نقي)</code>
+          <br>الألوان تُنتج بامتصاص الضوء — لذلك تكون أقل إشراقًا.
+        </p>
+
+        <h2>لماذا يختلف اللون؟</h2>
+        <p>
+          <ul>
+            <li>الشاشة تُضيء الألوان، بينما الورق يعكسها</li>
+            <li>نطاق ألوان (Gamut) RGB أوسع من CMYK</li>
+            <li>الأزرق الزاهي أو الأخضر الفلوري في RGB لا يمكن طباعته بدقة</li>
+          </ul>
+        </p>
+
+        <h2>كيف تتجنب المشكلة؟</h2>
+        <p>
+          <ul>
+            <li>ابدأ مشروعك في وضع <strong>CMYK</strong> (في Illustrator أو Photoshop)</li>
+            <li>استخدم معاينات الألوان (Color Proof) أثناء التصميم</li>
+            <li>لا تعتمد على الشاشة — استخدم أدلة ألوان مطبوعة (Pantone Guide)</li>
+            <li>اطلب بروفة مطبوعة قبل الكمية</li>
+          </ul>
+        </p>
+
+        <div class="mt-10 p-5 bg-slate-900/50 border-l-4 border-orange-500 rounded-r">
+          <p class="font-bold text-orange-300">💡 نصيحة احترافية:</p>
+          <p>حتى لو عملت في CMYK، قد يختلف اللون قليلاً بين مطبعة وأخرى. البروفة هي الحل الوحيد للتأكد.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 flex justify-center">
+        <a href="../index.html#videos" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-6 py-3 font-bold hover:opacity-95">
+          شاهد الفيديو التوضيحي
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="border-t border-white/10 mt-16">
+    <div class="mx-auto max-w-4xl px-4 py-6 text-center text-sm text-slate-400">
+      © <span id="year"></span> داخل المطبعه | Inside Praint
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
