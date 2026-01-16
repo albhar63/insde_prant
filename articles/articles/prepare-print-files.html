@@ -1,109 +1,0 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>كيف تجهز ملف للطباعة بدون مفاجآت؟ | داخل المطبعه</title>
-  <meta name="description" content="دليل شامل لإعداد ملفات الطباعة باحترافية: Bleed، CMYK، دقة الصورة، تضمين الخطوط، وتصدير PDF/X." />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style>
-    :root { color-scheme: dark; --orange-brand: #FF6F00; }
-    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-    .gridbg { background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0); background-size: 22px 22px; }
-    body { min-h-dvh bg-slate-950 text-slate-100 selection:bg-blue-500/30 selection:text-slate-50 }
-    .article-header { background: radial-gradient(600px 240px at 85% 20%, rgba(56,189,248,.20), transparent 60%); }
-    .back-btn {
-      background-color: var(--orange-brand) !important;
-      color: white !important;
-      border-color: var(--orange-brand) !important;
-    }
-    .back-btn:hover {
-      background-color: #e05a00 !important;
-      opacity: 0.95;
-    }
-    .prose h2 { margin-top: 1.5rem; margin-bottom: 0.75rem; }
-    .prose ul { padding-right: 1.5rem; margin-top: 0.5rem; }
-    .prose li { margin-bottom: 0.375rem; }
-  </style>
-  <link rel="icon" type="image/png" href="../favicon_32x32.png" sizes="32x32" />
-</head>
-<body class="min-h-dvh bg-slate-950 text-slate-100">
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 glass">
-    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-4">
-      <a href="../index.html" class="back-btn inline-flex items-center gap-2 rounded-xl px-4 py-2 font-bold">
-        ← العودة
-      </a>
-      <h1 class="text-xl font-extrabold">داخل المطبعه</h1>
-    </div>
-  </header>
-
-  <article class="article-header relative overflow-hidden">
-    <div class="absolute inset-0 gridbg opacity-60"></div>
-    <div class="relative mx-auto max-w-4xl px-4 py-10">
-      <h1 class="text-3xl md:text-4xl font-black tracking-tight text-orange-400 mb-6">
-        كيف تجهز ملف للطباعة بدون مفاجآت؟
-      </h1>
-      
-      <div class="prose prose-invert prose-lg max-w-none text-slate-200 space-y-6">
-        <p class="text-lg">
-          إعداد ملف طباعة صحيح هو نصف النجاح. الأخطاء الشائعة مثل نسيان الـ Bleed أو استخدام RGB قد تؤدي إلى نتائج كارثية بعد الطباعة. هذا الدليل يغطي كل ما تحتاجه لتسليم ملف احترافي.
-        </p>
-
-        <h2>1. الهوامش الآمنة (Safe Area)</h2>
-        <p>
-          احتفظ بجميع العناصر المهمة (نصوص، شعارات، صور رئيسية) على بعد لا يقل عن <strong>3–5 مم</strong> من حافة القطع النهائية. هذا يحميك من أن يُقص جزء من التصميم بسبب انحراف ماكينة القص.
-        </p>
-
-        <h2>2. الهوامش الزائدة (Bleed)</h2>
-        <p>
-          أضف <strong>3 مم bleed</strong> من كل جانب. هذا يعني أن الخلفيات أو الصور التي تمتد إلى الحافة يجب أن تتجاوز المقاس النهائي بمقدار 3 مم. عند التصدير، سيظهر المقاس الكلي كالتالي:
-          <br><code>المقاس النهائي + 6 مم (3 مم من كل جانب)</code>
-        </p>
-
-        <h2>3. نظام الألوان: CMYK فقط</h2>
-        <p>
-          تأكد من تحويل جميع العناصر إلى <strong>CMYK</strong>. الألوان في RGB تبدو زاهية على الشاشة لكنها تُطبع بشكل مختلف تمامًا. استخدم أدوات التحويل في Illustrator أو Photoshop قبل التصدير.
-        </p>
-
-        <h2>4. دقة الصور: 300 DPI</h2>
-        <p>
-          أي صورة أقل من <strong>300 نقطة في البوصة (DPI)</strong> ستظهر مشوشة أو بكسلية عند الطباعة. تجنب استخدام صور من الإنترنت مباشرة.
-        </p>
-
-        <h2>5. الخطوط: حوّلها إلى مسارات أو ضمّنها</h2>
-        <p>
-          لتجنب اختفاء الخطوط أو تغيّرها:
-          <ul>
-            <li>في Illustrator: اختر النص → <strong>Create Outlines</strong></li>
-            <li>في Photoshop: احفظ كـ PDF مع تفعيل <strong>Embed Fonts</strong></li>
-          </ul>
-        </p>
-
-        <h2>6. تصدير ملف PDF/X</h2>
-        <p>
-          استخدم إعدادات <strong>PDF/X-1a</strong> (للطباعة التقليدية) أو <strong>PDF/X-4</strong> (يدعم الشفافية). هذه الإعدادات تحافظ على الجودة وتتوافق مع أنظمة المطابع.
-        </p>
-
-        <div class="mt-10 p-5 bg-slate-900/50 border-l-4 border-orange-500 rounded-r">
-          <p class="font-bold text-orange-300">💡 نصيحة احترافية:</p>
-          <p>اطلب دائمًا <strong>بروفة مطبوعة</strong> قبل الطباعة بالكمية، خاصة للمشاريع ذات الألوان الحرجة أو التشطيبات الخاصة.</p>
-        </div>
-      </div>
-
-      <div class="mt-12 flex justify-center">
-        <a href="../index.html#videos" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-6 py-3 font-bold hover:opacity-95">
-          شاهد الفيديو التوضيحي
-        </a>
-      </div>
-    </div>
-  </article>
-
-  <footer class="border-t border-white/10 mt-16">
-    <div class="mx-auto max-w-4xl px-4 py-6 text-center text-sm text-slate-400">
-      © <span id="year"></span> داخل المطبعه | Inside Praint
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
