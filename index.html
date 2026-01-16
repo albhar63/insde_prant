@@ -1,1 +1,747 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>داخل المطبعه | Inside Praint — Option A</title>
+<meta name="description" content="موقع تعريفي لقناة داخل المطبعه (Inside Praint) — Option A: تصميم احترافي بسيط عن الطباعة والتجهيز." />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+:root{color-scheme: dark;}
+.glass{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+.gridbg{background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0); background-size: 22px 22px;}
+.fade-in{animation: fadeIn .6s ease both;}
+@keyframes fadeIn{from{opacity:0; transform: translateY(8px);}to{opacity:1; transform:none;}}
+.focus-ring:focus{outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,.45);}
 
+/* === إضافة اللون البرتقالي كمتغير عالمي === */
+:root {
+  --orange-brand: #FF6F00;
+}
+
+/* تطبيق اللون البرتقالي على العنوان الرئيسي */
+.hero-title {
+  color: var(--orange-brand) !important;
+}
+
+/* زر YouTube بلون برتقالي */
+.youtube-btn {
+  background-color: var(--orange-brand) !important;
+  color: white !important;
+  border-color: var(--orange-brand) !important;
+}
+.youtube-btn:hover {
+  background-color: #e05a00 !important;
+  opacity: 0.95;
+}
+
+/* Option A brand tweaks */
+.brand-grad{background-image: linear-gradient(225deg, rgb(56 189 248), rgb(37 99 235));}
+.brand-shadow{box-shadow: 0 18px 60px rgba(56,189,248,.10);}
+.print-hero{
+background:
+radial-gradient(600px 240px at 85% 20%, rgba(56,189,248,.20), transparent 60%),
+radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
+}
+/* nicer chips */
+.chip{transition: background-color .15s ease, border-color .15s ease, transform .15s ease;}
+.chip:active{transform: scale(.98);}
+/* light mode refinements */
+.light .focus-ring:focus{box-shadow: 0 0 0 3px rgba(2,132,199,.35) !important;}
+</style>
+</head>
+<body class="min-h-dvh bg-slate-950 text-slate-100 selection:bg-blue-500/30 selection:text-slate-50">
+<!-- Top bar -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 glass">
+<div class="mx-auto max-w-6xl px-4">
+<div class="flex items-center justify-between py-3">
+  <!-- 🔗 رابط القناة الكامل -->
+  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg" target="_blank" class="flex items-center gap-3">
+    <!-- 🖼️ شعار القناة -->
+    <img src="images/logo.jpeg" alt="شعار قناة داخل المطبعه" class="h-10 w-10 rounded-xl shadow-lg brand-shadow border border-white/10" />
+    <div class="leading-tight">
+      <div class="font-extrabold tracking-tight">داخل المطبعه</div>
+      <div class="text-xs text-slate-300">Inside Praint</div>
+    </div>
+  </a>
+<nav class="hidden md:flex items-center gap-1 text-sm">
+<a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#about">عن القناة</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#videos">الفيديوهات</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#series">السلاسل</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#contact">تواصل</a>
+</nav>
+<div class="flex items-center gap-2">
+<button id="themeBtn" class="hidden sm:inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10 focus-ring" type="button" title="تبديل المظهر">
+<span id="themeIcon" aria-hidden="true">◐</span>
+<span class="text-slate-200">المظهر</span>
+</button>
+<button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 focus-ring" aria-label="فتح القائمة" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+</button>
+</div>
+</div>
+<div id="mobileNav" class="md:hidden hidden pb-3">
+<div class="grid gap-1 rounded-xl border border-white/10 bg-white/5 p-2">
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#about">عن القناة</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#videos">الفيديوهات</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#series">السلاسل</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#contact">تواصل</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero -->
+<section class="relative overflow-hidden print-hero">
+<div class="absolute inset-0 gridbg opacity-60"></div>
+<div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-600/30 blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-fuchsia-600/25 blur-3xl"></div>
+<div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
+<div class="grid gap-10 md:grid-cols-12 items-center">
+<div class="md:col-span-7">
+<div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+<span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+محتوى عملي عن الطباعة والتجهيز
+</div>
+<!-- 🎨 العنوان الرئيسي باللون البرتقالي -->
+<h1 class="mt-4 text-3xl md:text-5xl font-black tracking-tight hero-title">
+داخل المطبعه
+<span class="block text-lg md:text-xl font-semibold text-slate-300 mt-2">Inside Praint</span>
+</h1>
+<p class="mt-4 text-slate-300 leading-relaxed max-w-prose">
+قناة تهتم بكل ما يحدث <span class="text-slate-100 font-semibold">خلف الكواليس</span> داخل المطابع: مواد الطباعة، إعداد الملفات، الألوان، التشطيبات، وأخطاء شائعة وكيف تتجنبها.
+</p>
+<div class="mt-7 flex flex-col sm:flex-row gap-3">
+<a id="primaryCta" href="#videos" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-5 py-3 font-bold shadow-lg brand-shadow hover:opacity-95">
+اكتشف الفيديوهات
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+</a>
+<a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 font-semibold hover:bg-white/10">
+تواصل/تعاون
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+</a>
+</div>
+<dl class="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+<dt class="text-xs text-slate-300">أسلوب</dt>
+<dd class="mt-1 font-extrabold">مباشر + أمثلة</dd>
+</div>
+<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+<dt class="text-xs text-slate-300">مواضيع</dt>
+<dd class="mt-1 font-extrabold">ألوان / ورق / تشطيب</dd>
+</div>
+<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+<dt class="text-xs text-slate-300">هدف</dt>
+<dd class="mt-1 font-extrabold">نتائج احترافية</dd>
+</div>
+</dl>
+</div>
+<div class="md:col-span-5">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-black/30">
+<div class="flex items-center justify-between gap-3">
+<div>
+<div class="text-sm text-slate-300">بطاقة القناة</div>
+<div class="font-extrabold">دليل سريع للمشاهد</div>
+<div class="mt-2 text-xs text-slate-400">Option A — هوية أزرق/سماوي</div>
+</div>
+<span class="text-xs rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-200">v1.0</span>
+</div>
+<div class="mt-4 grid gap-3">
+<div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+<div class="text-xs text-slate-300">ابدأ من هنا</div>
+<div class="mt-1 font-bold">كيف تجهز ملف للطباعة بدون مفاجآت؟</div>
+<div class="mt-2 text-sm text-slate-300">Bleed • CMYK • دقة • خطوط</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+<div class="text-xs text-slate-300">أكثر سؤال</div>
+<div class="mt-1 font-bold">اختيار الورق المناسب للمشروع</div>
+<div class="mt-2 text-sm text-slate-300">مطفي/لامع • سماكة • ملمس</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+<div class="text-xs text-slate-300">نصيحة ذهبية</div>
+<div class="mt-1 font-bold">اطلب بروفة (Proof) دائمًا</div>
+<div class="mt-2 text-sm text-slate-300">لتتأكد من اللون والمقاس قبل الكمية</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap items-center gap-2">
+<button id="copyTagline" class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10 focus-ring" type="button">
+نسخ وصف قصير
+</button>
+<span id="copyStatus" class="text-xs text-slate-400" aria-live="polite"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About -->
+<section id="about" class="mx-auto max-w-6xl px-4 py-14">
+<div class="grid gap-8 md:grid-cols-12">
+<div class="md:col-span-5">
+<h2 class="text-2xl md:text-3xl font-black tracking-tight">عن القناة</h2>
+<p class="mt-3 text-slate-300 leading-relaxed">
+"داخل المطبعه" تقدم محتوى مبسّط يساعد المصممين وأصحاب المشاريع على فهم الطباعة كعملية كاملة: من تجهيز الملفات إلى اختيار الخامات والتشطيب.
+</p>
+<ul class="mt-5 grid gap-3">
+<li class="rounded-xl border border-white/10 bg-white/5 p-4">
+<div class="font-bold">شرح عملي</div>
+<div class="text-sm text-slate-300 mt-1">أمثلة حقيقية ومقارنات قبل/بعد.</div>
+</li>
+<li class="rounded-xl border border-white/10 bg-white/5 p-4">
+<div class="font-bold">قوائم جاهزة</div>
+<div class="text-sm text-slate-300 mt-1">Checklist لملفات الطباعة وتسليم المطبعة.</div>
+</li>
+<li class="rounded-xl border border-white/10 bg-white/5 p-4">
+<div class="font-bold">تقليل الهدر</div>
+<div class="text-sm text-slate-300 mt-1">تجنب أخطاء مكلفة في اللون والمقاسات.</div>
+</li>
+</ul>
+</div>
+<div class="md:col-span-7">
+<div class="rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/0 p-6">
+<div class="flex items-start justify-between gap-4 flex-wrap">
+<div>
+<div class="text-sm text-slate-300">ما الذي ستجده؟</div>
+<h3 class="mt-1 text-xl font-extrabold">خريطة محتوى سريعة</h3>
+</div>
+<div class="flex gap-2">
+<button class="chip active" data-chip="all" type="button">الكل</button>
+<button class="chip" data-chip="files" type="button">ملفات</button>
+<button class="chip" data-chip="materials" type="button">خامات</button>
+<button class="chip" data-chip="finishing" type="button">تشطيب</button>
+</div>
+</div>
+<div class="mt-6 grid gap-3 sm:grid-cols-2" id="topicGrid">
+<!-- populated by JS -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Videos -->
+<section id="videos" class="mx-auto max-w-6xl px-4 py-14">
+<div class="flex items-end justify-between gap-4 flex-wrap">
+<div>
+<h2 class="text-2xl md:text-3xl font-black tracking-tight">الفيديوهات</h2>
+<p class="mt-2 text-slate-300">فلتر سريع حسب النوع وابحث بالعنوان.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+<div class="relative flex-1 sm:w-72">
+<input id="searchInput" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm placeholder:text-slate-400 focus-ring" placeholder="ابحث... (مثال: CMYK)" />
+<div class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</div>
+</div>
+<select id="categorySelect" class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm focus-ring">
+<option value="all">كل الأنواع</option>
+<option value="Basics">أساسيات</option>
+<option value="Color">ألوان</option>
+<option value="Paper">ورق</option>
+<option value="Finishing">تشطيب</option>
+</select>
+</div>
+</div>
+<div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="videoGrid" aria-live="polite">
+<!-- populated by JS -->
+</div>
+<div class="mt-6 text-sm text-slate-400" id="resultsMeta"></div>
+</section>
+<!-- Series/Services -->
+<section id="series" class="mx-auto max-w-6xl px-4 py-14">
+<div class="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10">
+<div class="flex items-start justify-between gap-6 flex-wrap">
+<div>
+<h2 class="text-2xl md:text-3xl font-black tracking-tight">سلاسل مقترحة + خدمات</h2>
+<p class="mt-2 text-slate-300">أفكار تنظيمية للمحتوى، ويمكن استخدامها كعروض تعاون مع المطابع أو العلامات التجارية.</p>
+</div>
+<div class="flex gap-2">
+<button id="expandAll" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">فتح الكل</button>
+<button id="collapseAll" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">إغلاق الكل</button>
+</div>
+</div>
+<div class="mt-8 grid gap-4 md:grid-cols-2" id="accordion">
+<!-- populated by JS -->
+</div>
+<div class="mt-10 grid gap-4 md:grid-cols-3">
+<div class="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+<div class="text-sm text-slate-300">خدمة</div>
+<div class="mt-1 font-extrabold">مراجعة ملف قبل الطباعة</div>
+<p class="mt-2 text-sm text-slate-300">فحص المقاس، الـBleed، الألوان، الخطوط، والتصدير.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+<div class="text-sm text-slate-300">خدمة</div>
+<div class="mt-1 font-extrabold">استشارة اختيار خامات</div>
+<p class="mt-2 text-sm text-slate-300">مناسب للهوية، المنتجات، والتغليف حسب الميزانية.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+<div class="text-sm text-slate-300">خدمة</div>
+<div class="mt-1 font-extrabold">تدريب سريع لفريقك</div>
+<p class="mt-2 text-sm text-slate-300">جلسة عملية لتقليل أخطاء التسليم للمطابع.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section id="contact" class="mx-auto max-w-6xl px-4 py-14">
+<div class="grid gap-6 lg:grid-cols-12 items-start">
+<div class="lg:col-span-5">
+<h2 class="text-2xl md:text-3xl font-black tracking-tight">تواصل</h2>
+<p class="mt-2 text-slate-300 leading-relaxed">ضع روابطك الحقيقية لاحقًا. حاليًا هذه الصفحة جاهزة للعرض والتعديل.</p>
+<div class="mt-5 grid gap-3">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+<div class="text-xs text-slate-300">البريد</div>
+<div class="mt-1 flex items-center justify-between gap-3">
+<div class="font-semibold" id="emailText">inside.praint@example.com</div>
+<button id="copyEmail" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">نسخ</button>
+</div>
+<div class="mt-2 text-xs text-slate-400" id="emailStatus" aria-live="polite"></div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+<div class="text-xs text-slate-300">روابط</div>
+<div class="mt-2 flex flex-wrap gap-2">
+  <!-- ✅ زر YouTube فعّال بلون برتقالي -->
+  <a href="https://www.youtube.com/channel/UC7nEZnqtTsAPzlJpOlJyKDg" target="_blank" class="youtube-btn rounded-xl px-4 py-2 text-sm font-bold">
+    YouTube
+  </a>
+  <a class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10" href="#" onclick="return false;">Instagram</a>
+  <a class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10" href="#" onclick="return false;">TikTok</a>
+</div>
+<p class="mt-3 text-xs text-slate-400">غيّر الروابط من داخل ملف HTML بسهولة.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
+<div class="flex items-start justify-between gap-4 flex-wrap">
+<div>
+<h3 class="text-xl font-extrabold">نموذج رسالة (تجريبي)</h3>
+<p class="mt-1 text-sm text-slate-300">لن يتم إرسال شيء. سنحفظ رسالتك مؤقتًا داخل المتصفح لعرضها.</p>
+</div>
+<button id="clearMessages" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">مسح الرسائل</button>
+</div>
+<form id="contactForm" class="mt-6 grid gap-3">
+<div class="grid gap-3 sm:grid-cols-2">
+<label class="grid gap-1">
+<span class="text-sm text-slate-200">الاسم</span>
+<input required name="name" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm placeholder:text-slate-500 focus-ring" placeholder="اسمك" />
+</label>
+<label class="grid gap-1">
+<span class="text-sm text-slate-200">وسيلة تواصل</span>
+<input required name="contact" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm placeholder:text-slate-500 focus-ring" placeholder="بريد/واتساب" />
+</label>
+</div>
+<label class="grid gap-1">
+<span class="text-sm text-slate-200">نوع الطلب</span>
+<select name="type" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm focus-ring">
+<option>اقتراح فيديو</option>
+<option>تعاون/إعلان</option>
+<option>استشارة طباعة</option>
+<option>أخرى</option>
+</select>
+</label>
+<label class="grid gap-1">
+<span class="text-sm text-slate-200">الرسالة</span>
+<textarea required name="message" rows="4" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm placeholder:text-slate-500 focus-ring" placeholder="اكتب التفاصيل..."></textarea>
+</label>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<button class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-5 py-3 font-bold hover:opacity-95" type="submit">
+حفظ الرسالة
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+</button>
+<div class="text-xs text-slate-400" id="formStatus" aria-live="polite"></div>
+</div>
+</form>
+<div class="mt-6">
+<div class="flex items-center justify-between">
+<h4 class="font-extrabold">الرسائل المحفوظة على هذا الجهاز</h4>
+<span class="text-xs text-slate-400" id="msgCount"></span>
+</div>
+<div id="messages" class="mt-3 grid gap-3"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="border-t border-white/10">
+<div class="mx-auto max-w-6xl px-4 py-8">
+<div class="flex flex-col md:flex-row gap-3 items-center justify-between">
+<div class="text-sm text-slate-400">© <span id="year"></span> داخل المطبعه | Inside Praint</div>
+<div class="text-xs text-slate-500">صفحة واحدة — جاهزة للتعديل (شعار/روابط/صور).</div>
+</div>
+</div>
+</footer>
+<script>
+// ----- Tiny UI helpers -----
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+// Mobile menu
+const menuBtn = $('#menuBtn');
+const mobileNav = $('#mobileNav');
+menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+$$('#mobileNav a').forEach(a => a.addEventListener('click', () => mobileNav.classList.add('hidden')));
+// Theme toggle (dark default)
+const themeBtn = $('#themeBtn');
+const themeIcon = $('#themeIcon');
+const themeKey = 'dm_theme';
+function applyTheme(mode){
+// mode: 'dark' | 'light'
+if(mode === 'light'){
+document.documentElement.style.colorScheme = 'light';
+document.body.className = document.body.className
+.replace('bg-slate-950','bg-slate-50')
+.replace('text-slate-100','text-slate-900');
+// adjust common colors via toggling a class on html
+document.documentElement.classList.add('light');
+themeIcon.textContent = '☀';
+} else {
+document.documentElement.style.colorScheme = 'dark';
+document.documentElement.classList.remove('light');
+// restore base classes safely
+if(!document.body.classList.contains('bg-slate-950')) document.body.classList.add('bg-slate-950');
+document.body.classList.remove('bg-slate-50');
+document.body.classList.add('text-slate-100');
+document.body.classList.remove('text-slate-900');
+themeIcon.textContent = '◐';
+}
+localStorage.setItem(themeKey, mode);
+}
+// Light theme CSS tweaks by targeting .light
+const style = document.createElement('style');
+style.textContent = `
+.light body{background:#f8fafc !important; color:#0f172a !important;}
+.light .gridbg{opacity:.35}
+.light .text-slate-300{color: rgb(71 85 105) !important;}
+.light .text-slate-400{color: rgb(100 116 139) !important;}
+.light .text-slate-500{color: rgb(100 116 139) !important;}
+.light .border-white\\/10{border-color: rgba(15,23,42,.12) !important;}
+.light .border-white\\/15{border-color: rgba(15,23,42,.18) !important;}
+.light .bg-white\\/5{background-color: rgba(15,23,42,.04) !important;}
+.light .bg-slate-950\\/40{background-color: rgba(15,23,42,.04) !important;}
+.light .bg-slate-950\\/70{background-color: rgba(248,250,252,.8) !important;}
+.light .shadow-black\\/30{box-shadow: 0 20px 60px rgba(15,23,42,.12) !important;}
+`;
+document.head.appendChild(style);
+const savedTheme = localStorage.getItem(themeKey);
+if(savedTheme) applyTheme(savedTheme);
+themeBtn?.addEventListener('click', () => applyTheme((localStorage.getItem(themeKey) || 'dark') === 'dark' ? 'light' : 'dark'));
+// Chips UI
+const chipBase = 'chip inline-flex items-center justify-center rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-xs hover:bg-white/10 focus-ring';
+$$('.chip').forEach(btn => btn.className = chipBase + (btn.classList.contains('active') ? ' ring-2 ring-blue-500/50' : ''));
+const topics = [
+{title:'تجهيز ملفات للطباعة', desc:'Bleed، هوامش أمان، خطوط، تصدير PDF.', tag:'files'},
+{title:'أنظمة الألوان', desc:'CMYK vs RGB وكيف تتجنب اختلاف اللون.', tag:'files'},
+{title:'اختيار الورق', desc:'سماكات، ملمس، مطفي/لامع، واستخداماته.', tag:'materials'},
+{title:'الطباعة الرقمية مقابل الأوفست', desc:'متى تختار كل نوع؟', tag:'materials'},
+{title:'السلوفان واللامينيت', desc:'حماية ولمسة نهائية باحتراف.', tag:'finishing'},
+{title:'Spot UV / فويل', desc:'تفاصيل فاخرة ترفع قيمة المنتج.', tag:'finishing'},
+];
+function renderTopics(filter='all'){
+const grid = $('#topicGrid');
+grid.innerHTML = '';
+const items = topics.filter(t => filter==='all' ? true : t.tag===filter);
+items.forEach((t,i) => {
+const div = document.createElement('div');
+div.className = 'fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5';
+div.style.animationDelay = (i*60)+'ms';
+div.innerHTML = `
+<div class="flex items-start justify-between gap-3">
+<div>
+<div class="font-extrabold">${t.title}</div>
+<div class="mt-1 text-sm text-slate-300">${t.desc}</div>
+</div>
+<span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">${t.tag}</span>
+</div>
+`;
+grid.appendChild(div);
+});
+}
+$$('.chip').forEach(btn => {
+btn.addEventListener('click', () => {
+$$('.chip').forEach(b => b.className = chipBase);
+btn.className = chipBase + ' ring-2 ring-blue-500/50';
+renderTopics(btn.dataset.chip);
+});
+});
+renderTopics('all');
+// Videos data (placeholders)
+const videos = [
+{title:'الفرق بين RGB و CMYK (ولماذا يختلف اللون؟)', category:'Color', minutes:8, level:'أساسيات', note:'شرح سريع + نصائح عملية.'},
+{title:'Bleed و Safe Area: أهم إعدادين قبل الطباعة', category:'Basics', minutes:6, level:'أساسيات', note:'أمثلة مقاسات.'},
+{title:'اختيار الورق: مطفي أم لامع؟', category:'Paper', minutes:7, level:'متوسط', note:'حسب نوع المشروع.'},
+{title:'PDF للطباعة: أفضل إعدادات التصدير', category:'Basics', minutes:9, level:'متوسط', note:'خطوط، دقة، ألوان.'},
+{title:'Spot UV وفويل: كيف تجهز ملف التشطيب؟', category:'Finishing', minutes:10, level:'متقدم', note:'طبقات خاصة وPantone.'},
+{title:'بروفة الطباعة (Proof): متى ولماذا؟', category:'Basics', minutes:5, level:'أساسيات', note:'لتجنب خسائر.'},
+{title:'سماكات الورق (gsm) بطريقة سهلة', category:'Paper', minutes:6, level:'أساسيات', note:'أمثلة واقعية.'},
+{title:'سلوفان/لامينيت: الفرق بين المطفي والحريري', category:'Finishing', minutes:7, level:'متوسط', note:'اللمس والحماية.'}
+];
+function renderVideos(){
+const q = ($('#searchInput').value || '').trim().toLowerCase();
+const cat = $('#categorySelect').value;
+const filtered = videos.filter(v => {
+const okCat = (cat === 'all') ? true : v.category === cat;
+const okQ = q ? (v.title.toLowerCase().includes(q) || v.note.toLowerCase().includes(q)) : true;
+return okCat && okQ;
+});
+const grid = $('#videoGrid');
+grid.innerHTML = '';
+filtered.forEach((v,i) => {
+const card = document.createElement('article');
+card.className = 'fade-in rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition';
+card.style.animationDelay = (i*50)+'ms';
+const badge = v.category;
+card.innerHTML = `
+<div class="flex items-start justify-between gap-3">
+<span class="text-[11px] rounded-full border border-white/10 bg-slate-950/40 px-2.5 py-1 text-slate-200">${badge}</span>
+<span class="text-xs text-slate-400">${v.minutes} دقائق • ${v.level}</span>
+</div>
+<h3 class="mt-3 font-extrabold leading-snug">${v.title}</h3>
+<p class="mt-2 text-sm text-slate-300">${v.note}</p>
+<div class="mt-4 flex items-center justify-between gap-3">
+<button class="watchBtn rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-4 py-2 text-sm font-bold hover:opacity-95" type="button">عرض مثال</button>
+<button class="shareBtn rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">نسخ عنوان</button>
+</div>
+`;
+card.querySelector('.shareBtn').addEventListener('click', async () => {
+try{
+await navigator.clipboard.writeText(v.title);
+toast('تم نسخ العنوان');
+}catch{ toast('تعذّر النسخ'); }
+});
+card.querySelector('.watchBtn').addEventListener('click', () => openModal(v));
+grid.appendChild(card);
+});
+$('#resultsMeta').textContent = `النتائج: ${filtered.length} من ${videos.length}`;
+if(filtered.length === 0){
+const empty = document.createElement('div');
+empty.className = 'rounded-2xl border border-white/10 bg-slate-950/30 p-6 text-slate-300 sm:col-span-2 lg:col-span-3';
+empty.textContent = 'لا توجد نتائج. جرّب كلمة أخرى أو اختر نوعًا مختلفًا.';
+grid.appendChild(empty);
+}
+}
+$('#searchInput').addEventListener('input', renderVideos);
+$('#categorySelect').addEventListener('change', renderVideos);
+renderVideos();
+// Modal
+const modal = document.createElement('div');
+modal.id = 'modal';
+modal.className = 'fixed inset-0 hidden z-[60]';
+modal.innerHTML = `
+<div class="absolute inset-0 bg-black/60"></div>
+<div class="relative mx-auto max-w-2xl px-4 py-10">
+<div class="rounded-3xl border border-white/10 bg-slate-950/90 glass p-6">
+<div class="flex items-start justify-between gap-4">
+<div>
+<div class="text-xs text-slate-300">معاينة</div>
+<h3 id="modalTitle" class="mt-1 text-xl font-extrabold"></h3>
+<p id="modalMeta" class="mt-2 text-sm text-slate-300"></p>
+</div>
+<button id="closeModal" class="rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10 focus-ring" aria-label="إغلاق" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+</button>
+</div>
+<div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5">
+<div class="text-sm text-slate-200 font-bold">ملاحظة</div>
+<div id="modalNote" class="mt-2 text-sm text-slate-300"></div>
+<div class="mt-4 text-xs text-slate-400">ضع رابط فيديو يوتيوب الحقيقي هنا لاحقًا (Embed) أو زر يفتح القناة.</div>
+</div>
+<div class="mt-5 flex flex-col sm:flex-row gap-2">
+<button id="copyModalTitle" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">نسخ العنوان</button>
+<a href="#contact" id="modalCta" class="rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-4 py-2 text-sm font-bold text-center hover:opacity-95">اقترح فيديو مشابه</a>
+</div>
+</div>
+</div>
+`;
+document.body.appendChild(modal);
+function openModal(v){
+$('#modalTitle').textContent = v.title;
+$('#modalMeta').textContent = `${v.category} • ${v.minutes} دقائق • ${v.level}`;
+$('#modalNote').textContent = v.note;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+$('#copyModalTitle').onclick = async () => {
+try{ await navigator.clipboard.writeText(v.title); toast('تم النسخ'); }catch{ toast('تعذّر النسخ'); }
+};
+}
+function closeModal(){
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+modal.addEventListener('click', (e) => {
+if(e.target === modal.firstElementChild) closeModal();
+});
+$('#closeModal').addEventListener('click', closeModal);
+window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+// Accordion
+const accData = [
+{title:'سلسلة: من التصميم إلى الطباعة', items:['تحويل الألوان إلى CMYK','تجهيز PDF/X','اختبار قبل الطباعة (Proof)']},
+{title:'سلسلة: ورق وخامات', items:['مقارنة سماكات gsm','اختيار الخامة حسب الاستخدام','أخطاء شائعة عند اختيار الورق']},
+{title:'سلسلة: التشطيبات الفاخرة', items:['Spot UV','فويل حراري','ديكوباج / قص خاص']},
+{title:'تعاون مع مطبعة', items:['تصوير داخل الورشة','شرح الماكينات بشكل مبسّط','حلقة أسئلة وأجوبة مع الفنيين']},
+];
+function renderAccordion(){
+const acc = $('#accordion');
+acc.innerHTML = '';
+accData.forEach((a, idx) => {
+const id = 'acc_' + idx;
+const card = document.createElement('div');
+card.className = 'rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden';
+card.innerHTML = `
+<button class="w-full flex items-center justify-between gap-3 px-5 py-4 hover:bg-white/5 focus-ring" type="button" aria-expanded="false" aria-controls="${id}">
+<span class="font-extrabold text-right">${a.title}</span>
+<span class="chev transition" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+</span>
+</button>
+<div id="${id}" class="hidden px-5 pb-5">
+<ul class="mt-1 grid gap-2">
+${a.items.map(x => `<li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">${x}</li>`).join('')}
+</ul>
+</div>
+`;
+const btn = card.querySelector('button');
+const panel = card.querySelector('#'+id);
+const chev = card.querySelector('.chev');
+btn.addEventListener('click', () => {
+const isOpen = !panel.classList.contains('hidden');
+panel.classList.toggle('hidden');
+btn.setAttribute('aria-expanded', String(!isOpen));
+chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+});
+acc.appendChild(card);
+});
+}
+renderAccordion();
+$('#expandAll').addEventListener('click', () => {
+$$('#accordion > div').forEach(card => {
+const btn = card.querySelector('button');
+const panel = card.querySelector('div[id^="acc_"]');
+const chev = card.querySelector('.chev');
+panel.classList.remove('hidden');
+btn.setAttribute('aria-expanded','true');
+chev.style.transform = 'rotate(180deg)';
+});
+});
+$('#collapseAll').addEventListener('click', () => {
+$$('#accordion > div').forEach(card => {
+const btn = card.querySelector('button');
+const panel = card.querySelector('div[id^="acc_"]');
+const chev = card.querySelector('.chev');
+panel.classList.add('hidden');
+btn.setAttribute('aria-expanded','false');
+chev.style.transform = 'rotate(0deg)';
+});
+});
+// Copy helpers
+async function copyText(txt){
+await navigator.clipboard.writeText(txt);
+}
+$('#copyTagline').addEventListener('click', async () => {
+const txt = 'داخل المطبعه | Inside Praint — محتوى عملي عن الطباعة، الورق، الألوان، والتشطيب.';
+try{ await copyText(txt); $('#copyStatus').textContent = 'تم النسخ'; }
+catch{ $('#copyStatus').textContent = 'تعذّر النسخ'; }
+setTimeout(()=> $('#copyStatus').textContent = '', 1500);
+});
+$('#copyEmail').addEventListener('click', async () => {
+const email = $('#emailText').textContent.trim();
+try{ await copyText(email); $('#emailStatus').textContent = 'تم نسخ البريد'; }
+catch{ $('#emailStatus').textContent = 'تعذّر النسخ'; }
+setTimeout(()=> $('#emailStatus').textContent = '', 1500);
+});
+// Contact form: store messages in localStorage
+const msgKey = 'dm_messages_v1';
+function loadMsgs(){
+try{ return JSON.parse(localStorage.getItem(msgKey) || '[]'); }catch{ return []; }
+}
+function saveMsgs(list){ localStorage.setItem(msgKey, JSON.stringify(list)); }
+function renderMsgs(){
+const list = loadMsgs();
+$('#msgCount').textContent = `${list.length} رسالة`;
+const wrap = $('#messages');
+wrap.innerHTML = '';
+if(list.length === 0){
+const empty = document.createElement('div');
+empty.className = 'rounded-2xl border border-white/10 bg-slate-950/30 p-5 text-sm text-slate-300';
+empty.textContent = 'لا توجد رسائل محفوظة بعد.';
+wrap.appendChild(empty);
+return;
+}
+list.slice().reverse().forEach((m, i) => {
+const card = document.createElement('div');
+card.className = 'rounded-2xl border border-white/10 bg-slate-950/40 p-5';
+card.innerHTML = `
+<div class="flex items-start justify-between gap-4">
+<div>
+<div class="font-extrabold">${escapeHtml(m.name)} <span class="text-xs text-slate-400 font-normal">• ${escapeHtml(m.type)}</span></div>
+<div class="text-xs text-slate-400 mt-1">${new Date(m.at).toLocaleString('ar')}</div>
+</div>
+<button class="delMsg rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs hover:bg-white/10 focus-ring" type="button">حذف</button>
+</div>
+<div class="mt-3 text-sm text-slate-300 whitespace-pre-wrap">${escapeHtml(m.message)}</div>
+<div class="mt-3 text-xs text-slate-400">وسيلة تواصل: ${escapeHtml(m.contact)}</div>
+`;
+card.querySelector('.delMsg').addEventListener('click', () => {
+const all = loadMsgs();
+// delete by timestamp+contact+name best-effort
+const idx = all.findIndex(x => x.at === m.at && x.contact === m.contact && x.name === m.name);
+if(idx >= 0) all.splice(idx,1);
+saveMsgs(all);
+renderMsgs();
+toast('تم الحذف');
+});
+wrap.appendChild(card);
+});
+}
+function escapeHtml(s){
+return String(s)
+.replaceAll('&','&amp;')
+.replaceAll('<','&lt;')
+.replaceAll('>','&gt;')
+.replaceAll('"','&quot;')
+.replaceAll("'",'&#039;');
+}
+$('#contactForm').addEventListener('submit', (e) => {
+e.preventDefault();
+const fd = new FormData(e.currentTarget);
+const msg = {
+name: (fd.get('name')||'').toString().trim(),
+contact: (fd.get('contact')||'').toString().trim(),
+type: (fd.get('type')||'').toString().trim(),
+message: (fd.get('message')||'').toString().trim(),
+at: Date.now()
+};
+if(!msg.name || !msg.contact || !msg.message){
+$('#formStatus').textContent = 'يرجى تعبئة الحقول المطلوبة.';
+return;
+}
+const list = loadMsgs();
+list.push(msg);
+saveMsgs(list);
+e.currentTarget.reset();
+$('#formStatus').textContent = 'تم حفظ الرسالة على هذا الجهاز.';
+setTimeout(()=> $('#formStatus').textContent = '', 2000);
+renderMsgs();
+});
+$('#clearMessages').addEventListener('click', () => {
+localStorage.removeItem(msgKey);
+renderMsgs();
+toast('تم المسح');
+});
+renderMsgs();
+// Toast
+const toastEl = document.createElement('div');
+toastEl.className = 'fixed bottom-4 left-4 z-[70] hidden';
+toastEl.innerHTML = '<div class="rounded-2xl border border-white/10 bg-slate-950/90 glass px-4 py-3 text-sm text-slate-100 shadow-xl shadow-black/30"></div>';
+document.body.appendChild(toastEl);
+let toastTimer;
+function toast(msg){
+toastEl.firstElementChild.textContent = msg;
+toastEl.classList.remove('hidden');
+clearTimeout(toastTimer);
+toastTimer = setTimeout(()=> toastEl.classList.add('hidden'), 1600);
+}
+// Footer year
+$('#year').textContent = new Date().getFullYear();
+// Smooth scroll offset for sticky header
+document.documentElement.style.scrollBehavior = 'smooth';
+</script>
+</body>
+</html>
