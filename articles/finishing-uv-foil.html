@@ -1,1 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spot UV و الفويل | داخل المطبعه</title>
+  <meta name="description" content="شرح تفصيلي لتقنيتي التشطيب الفاخر: Spot UV و الفويل الحراري، وكيف تعد ملفاتك لهما بشكل صحيح." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root { color-scheme: dark; --orange-brand: #FF6F00; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .gridbg { background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0); background-size: 22px 22px; }
+    body { min-h-dvh bg-slate-950 text-slate-100 selection:bg-blue-500/30 selection:text-slate-50 }
+    .article-header { background: radial-gradient(600px 240px at 30% 60%, rgba(168,85,247,.15), transparent 60%); }
+    .back-btn {
+      background-color: var(--orange-brand) !important;
+      color: white !important;
+      border-color: var(--orange-brand) !important;
+    }
+    .back-btn:hover {
+      background-color: #e05a00 !important;
+      opacity: 0.95;
+    }
+    .prose h2 { margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  </style>
+  <link rel="icon" type="image/png" href="../favicon_32x32.png" sizes="32x32" />
+</head>
+<body class="min-h-dvh bg-slate-950 text-slate-100">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 glass">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center gap-4">
+      <a href="../index.html" class="back-btn inline-flex items-center gap-2 rounded-xl px-4 py-2 font-bold">
+        ← العودة
+      </a>
+      <h1 class="text-xl font-extrabold">داخل المطبعه</h1>
+    </div>
+  </header>
 
+  <article class="article-header relative overflow-hidden">
+    <div class="absolute inset-0 gridbg opacity-60"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-black tracking-tight text-orange-400 mb-6">
+        Spot UV و الفويل الحراري
+      </h1>
+      
+      <div class="prose prose-invert prose-lg max-w-none text-slate-200 space-y-6">
+        <p class="text-lg">
+          هذه التقنيات ترفع من قيمة المنتج المطبوع بشكل كبير، لكنها تتطلب إعداد ملفات دقيقة جدًا.
+        </p>
+
+        <h2>ما هو Spot UV؟</h2>
+        <p>
+          طبقة لامعة شفافة تُوضع على مناطق محددة من التصميم (مثل الشعار أو الحواف) لإبرازها بصريًا ولمسياً.
+        </p>
+
+        <h2>ما هو الفويل (Foil Stamping)؟</h2>
+        <p>
+          لصق طبقة معدنية (ذهب، فضة، ألوان) على مناطق محددة باستخدام الحرارة والضغط. يعطي مظهرًا فاخرًا جدًا.
+        </p>
+
+        <h2>كيف تعد الملف؟</h2>
+        <p>
+          <ul>
+            <li>أنشئ <strong>طبقة منفصلة</strong> (Separation Layer) لكل تقنية</li>
+            <li>سمّها بوضوح: <code>SPOT UV</code> أو <code>FOIL GOLD</code></li>
+            <li>اجعلها بالأبيض والأسود: الأبيض = التطبيق، الأسود = لا تطبيق</li>
+            <li>لا تستخدم ألوانًا — فقط قيم رمادية (100% أبيض للتطبيق الكامل)</li>
+          </ul>
+        </p>
+
+        <h2>نصائح مهمة</h2>
+        <p>
+          <ul>
+            <li>لا تضع Spot UV أو الفويل على خلفيات داكنة جدًا (قد لا يظهر الفرق)</li>
+            <li>تجنب الخطوط الرفيعة جدًا (< 1pt) — قد لا تُطبع بدقة</li>
+            <li>استشر المطبعة مسبقًا عن الحد الأدنى للمساحة القابلة للتطبيق</li>
+          </ul>
+        </p>
+
+        <div class="mt-10 p-5 bg-slate-900/50 border-l-4 border-orange-500 rounded-r">
+          <p class="font-bold text-orange-300">💡 نصيحة احترافية:</p>
+          <p>اطلب عينة فعلية من المطبعة قبل الموافقة على التصميم النهائي. التأثير البصري يختلف كثيرًا على الورق الحقيقي.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 flex justify-center">
+        <a href="../index.html#videos" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-l from-sky-500 to-blue-700 px-6 py-3 font-bold hover:opacity-95">
+          شاهد الفيديو التوضيحي
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="border-t border-white/10 mt-16">
+    <div class="mx-auto max-w-4xl px-4 py-6 text-center text-sm text-slate-400">
+      © <span id="year"></span> داخل المطبعه | Inside Praint
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
