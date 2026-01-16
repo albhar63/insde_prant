@@ -151,17 +151,23 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
 <div class="mt-4 grid gap-3">
 <div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
 <div class="text-xs text-slate-300">ابدأ من هنا</div>
-<div class="mt-1 font-bold">كيف تجهز ملف للطباعة بدون مفاجآت؟</div>
+<a href="articles/prepare-print-files.html" class="mt-1 font-bold text-sky-300 hover:text-sky-200 transition">
+  كيف تجهز ملف للطباعة بدون مفاجآت؟
+</a>
 <div class="mt-2 text-sm text-slate-300">Bleed • CMYK • دقة • خطوط</div>
 </div>
 <div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
 <div class="text-xs text-slate-300">أكثر سؤال</div>
-<div class="mt-1 font-bold">اختيار الورق المناسب للمشروع</div>
+<a href="articles/choose-paper.html" class="mt-1 font-bold text-sky-300 hover:text-sky-200 transition">
+  اختيار الورق المناسب للمشروع
+</a>
 <div class="mt-2 text-sm text-slate-300">مطفي/لامع • سماكة • ملمس</div>
 </div>
 <div class="rounded-xl border border-white/10 bg-slate-950/40 p-4">
 <div class="text-xs text-slate-300">نصيحة ذهبية</div>
-<div class="mt-1 font-bold">اطلب بروفة (Proof) دائمًا</div>
+<a href="articles/always-request-proof.html" class="mt-1 font-bold text-sky-300 hover:text-sky-200 transition">
+  اطلب بروفة (Proof) دائمًا
+</a>
 <div class="mt-2 text-sm text-slate-300">لتتأكد من اللون والمقاس قبل الكمية</div>
 </div>
 </div>
@@ -207,15 +213,74 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
             <div class="text-sm text-slate-300">ما الذي ستجده؟</div>
             <h3 class="mt-1 text-xl font-extrabold">خريطة محتوى سريعة</h3>
           </div>
-          <div class="flex gap-2">
-            <button class="chip active" data-chip="all" type="button">الكل</button>
-            <button class="chip" data-chip="files" type="button">ملفات</button>
-            <button class="chip" data-chip="materials" type="button">خامات</button>
-            <button class="chip" data-chip="finishing" type="button">تشطيب</button>
-          </div>
         </div>
-        <div class="mt-6 grid gap-3 sm:grid-cols-2" id="topicGrid">
-          <!-- populated by JS -->
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/prepare-print-files.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  تجهيز ملفات للطباعة
+                </a>
+                <div class="mt-1 text-sm text-slate-300">Bleed، هوامش أمان، خطوط، تصدير PDF.</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">ملفات</span>
+            </div>
+          </div>
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/color-systems-cmyk.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  أنظمة الألوان
+                </a>
+                <div class="mt-1 text-sm text-slate-300">CMYK vs RGB وكيف تتجنب اختلاف اللون.</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">ملفات</span>
+            </div>
+          </div>
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/choose-paper.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  اختيار الورق
+                </a>
+                <div class="mt-1 text-sm text-slate-300">سماكات، ملمس، مطفي/لامع، واستخداماته.</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">خامات</span>
+            </div>
+          </div>
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/choose-paper.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  الطباعة الرقمية مقابل الأوفست
+                </a>
+                <div class="mt-1 text-sm text-slate-300">متى تختار كل نوع؟</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">خامات</span>
+            </div>
+          </div>
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/lamination-finishing.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  السلوفان واللامينيت
+                </a>
+                <div class="mt-1 text-sm text-slate-300">حماية ولمسة نهائية باحتراف.</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">تشطيب</span>
+            </div>
+          </div>
+          <div class="fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <a href="articles/finishing-uv-foil.html" class="font-extrabold text-sky-300 hover:text-sky-200 transition">
+                  Spot UV / فويل
+                </a>
+                <div class="mt-1 text-sm text-slate-300">تفاصيل فاخرة ترفع قيمة المنتج.</div>
+              </div>
+              <span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">تشطيب</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -271,8 +336,55 @@ radial-gradient(540px 220px at 10% 80%, rgba(37,99,235,.18), transparent 55%);
         <button id="collapseAll" class="rounded-xl border border-white/10 bg-slate-950/40 px-4 py-2 text-sm hover:bg-white/10 focus-ring" type="button">إغلاق الكل</button>
       </div>
     </div>
-    <div class="mt-8 grid gap-4 md:grid-cols-2" id="accordion">
-      <!-- populated by JS -->
+    <div class="mt-8 grid gap-4 md:grid-cols-2">
+      <div class="rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden">
+        <a href="articles/prepare-print-files.html" class="block w-full px-5 py-4 hover:bg-white/5 focus-ring text-right font-extrabold">
+          سلسلة: من التصميم إلى الطباعة
+        </a>
+        <div class="px-5 pb-5">
+          <ul class="mt-1 grid gap-2">
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">تحويل الألوان إلى CMYK</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">تجهيز PDF/X</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">اختبار قبل الطباعة (Proof)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden">
+        <a href="articles/choose-paper.html" class="block w-full px-5 py-4 hover:bg-white/5 focus-ring text-right font-extrabold">
+          سلسلة: ورق وخامات
+        </a>
+        <div class="px-5 pb-5">
+          <ul class="mt-1 grid gap-2">
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">مقارنة سماكات gsm</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">اختيار الخامة حسب الاستخدام</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">أخطاء شائعة عند اختيار الورق</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden">
+        <a href="articles/finishing-uv-foil.html" class="block w-full px-5 py-4 hover:bg-white/5 focus-ring text-right font-extrabold">
+          سلسلة: التشطيبات الفاخرة
+        </a>
+        <div class="px-5 pb-5">
+          <ul class="mt-1 grid gap-2">
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">Spot UV</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">فويل حراري</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">ديكوباج / قص خاص</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden">
+        <a href="articles/prepare-print-files.html" class="block w-full px-5 py-4 hover:bg-white/5 focus-ring text-right font-extrabold">
+          تعاون مع مطبعة
+        </a>
+        <div class="px-5 pb-5">
+          <ul class="mt-1 grid gap-2">
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">تصوير داخل الورشة</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">شرح الماكينات بشكل مبسّط</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">حلقة أسئلة وأجوبة مع الفنيين</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="mt-10 grid gap-4 md:grid-cols-3">
       <div class="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
@@ -435,105 +547,10 @@ document.head.appendChild(style);
 const savedTheme = localStorage.getItem(themeKey);
 if(savedTheme) applyTheme(savedTheme);
 themeBtn?.addEventListener('click', () => applyTheme((localStorage.getItem(themeKey) || 'dark') === 'dark' ? 'light' : 'dark'));
-// Chips UI
-const chipBase = 'chip inline-flex items-center justify-center rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-xs hover:bg-white/10 focus-ring';
-$$('.chip').forEach(btn => btn.className = chipBase + (btn.classList.contains('active') ? ' ring-2 ring-blue-500/50' : ''));
-const topics = [
-{title:'تجهيز ملفات للطباعة', desc:'Bleed، هوامش أمان، خطوط، تصدير PDF.', tag:'files'},
-{title:'أنظمة الألوان', desc:'CMYK vs RGB وكيف تتجنب اختلاف اللون.', tag:'files'},
-{title:'اختيار الورق', desc:'سماكات، ملمس، مطفي/لامع، واستخداماته.', tag:'materials'},
-{title:'الطباعة الرقمية مقابل الأوفست', desc:'متى تختار كل نوع؟', tag:'materials'},
-{title:'السلوفان واللامينيت', desc:'حماية ولمسة نهائية باحتراف.', tag:'finishing'},
-{title:'Spot UV / فويل', desc:'تفاصيل فاخرة ترفع قيمة المنتج.', tag:'finishing'},
-];
-function renderTopics(filter='all'){
-const grid = $('#topicGrid');
-grid.innerHTML = '';
-const items = topics.filter(t => filter==='all' ? true : t.tag===filter);
-items.forEach((t,i) => {
-const div = document.createElement('div');
-div.className = 'fade-in rounded-2xl border border-white/10 bg-slate-950/40 p-5';
-div.style.animationDelay = (i*60)+'ms';
-div.innerHTML = `
-<div class="flex items-start justify-between gap-3">
-<div>
-<div class="font-extrabold">${t.title}</div>
-<div class="mt-1 text-sm text-slate-300">${t.desc}</div>
-</div>
-<span class="text-[11px] rounded-full border border-white/10 bg-white/5 px-2 py-1 text-slate-200">${t.tag}</span>
-</div>
-`;
-grid.appendChild(div);
-});
-}
-$$('.chip').forEach(btn => {
-btn.addEventListener('click', () => {
-$$('.chip').forEach(b => b.className = chipBase);
-btn.className = chipBase + ' ring-2 ring-blue-500/50';
-renderTopics(btn.dataset.chip);
-});
-});
-renderTopics('all');
-// Accordion
-const accData = [
-{title:'سلسلة: من التصميم إلى الطباعة', items:['تحويل الألوان إلى CMYK','تجهيز PDF/X','اختبار قبل الطباعة (Proof)']},
-{title:'سلسلة: ورق وخامات', items:['مقارنة سماكات gsm','اختيار الخامة حسب الاستخدام','أخطاء شائعة عند اختيار الورق']},
-{title:'سلسلة: التشطيبات الفاخرة', items:['Spot UV','فويل حراري','ديكوباج / قص خاص']},
-{title:'تعاون مع مطبعة', items:['تصوير داخل الورشة','شرح الماكينات بشكل مبسّط','حلقة أسئلة وأجوبة مع الفنيين']},
-];
-function renderAccordion(){
-const acc = $('#accordion');
-acc.innerHTML = '';
-accData.forEach((a, idx) => {
-const id = 'acc_' + idx;
-const card = document.createElement('div');
-card.className = 'rounded-2xl border border-white/10 bg-slate-950/40 overflow-hidden';
-card.innerHTML = `
-<button class="w-full flex items-center justify-between gap-3 px-5 py-4 hover:bg-white/5 focus-ring" type="button" aria-expanded="false" aria-controls="${id}">
-<span class="font-extrabold text-right">${a.title}</span>
-<span class="chev transition" aria-hidden="true">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-</span>
-</button>
-<div id="${id}" class="hidden px-5 pb-5">
-<ul class="mt-1 grid gap-2">
-${a.items.map(x => `<li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300">${x}</li>`).join('')}
-</ul>
-</div>
-`;
-const btn = card.querySelector('button');
-const panel = card.querySelector('#'+id);
-const chev = card.querySelector('.chev');
-btn.addEventListener('click', () => {
-const isOpen = !panel.classList.contains('hidden');
-panel.classList.toggle('hidden');
-btn.setAttribute('aria-expanded', String(!isOpen));
-chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-});
-acc.appendChild(card);
-});
-}
-renderAccordion();
-$('#expandAll').addEventListener('click', () => {
-$$('#accordion > div').forEach(card => {
-const btn = card.querySelector('button');
-const panel = card.querySelector('div[id^="acc_"]');
-const chev = card.querySelector('.chev');
-panel.classList.remove('hidden');
-btn.setAttribute('aria-expanded','true');
-chev.style.transform = 'rotate(180deg)';
-});
-});
-$('#collapseAll').addEventListener('click', () => {
-$$('#accordion > div').forEach(card => {
-const btn = card.querySelector('button');
-const panel = card.querySelector('div[id^="acc_"]');
-const chev = card.querySelector('.chev');
-panel.classList.add('hidden');
-btn.setAttribute('aria-expanded','false');
-chev.style.transform = 'rotate(0deg)';
-});
-});
+
+// Accordion (for series section if needed later — currently static)
+// Removed dynamic topic rendering — now using static HTML
+
 // Copy helpers
 async function copyText(txt){
 await navigator.clipboard.writeText(txt);
